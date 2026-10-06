@@ -1,34 +1,34 @@
+
 # 🏠 Austin Housing Data Insights
-### Power BI Business Analysis Project
+### Power BI Housing Market Analysis
 
 ## 📌 Project Overview
 
-This project analyses **15,171 residential properties** across the Austin, Texas housing market using **Power BI**.
+This project analyses **15,171 residential properties** from the Austin, Texas housing market using **Power BI**.
 
-The objective was to create an interactive Business Intelligence solution that helps users understand how residential property values vary according to:
+The goal was to understand how property prices vary by:
 
-- Geographic location
-- Property type
+- Location
+- Home type
 - Living area
 - Lot size
 - Bedrooms and bathrooms
 - Property features
 - School characteristics
-- Housing amenities
+- Amenities
 
-The report allows users to move from a high-level market overview into detailed geographic, school, feature, and individual-property analysis.
+The report starts with an overall market view and then lets users explore location, schools, property features and individual listings in more detail.
 
-The project demonstrates practical Business Analyst and Data Analyst skills including:
+The main tools used were:
 
-- Business problem definition
-- Data modelling
+- Power BI
+- Power Query
 - DAX
-- Interactive reporting
+- Data modelling
 - Field parameters
 - Key Influencers
-- Geographic analysis
-- Market segmentation
-- Business insight generation
+- Geographic mapping
+- Interactive filters and tooltips
 
 ---
 
@@ -38,47 +38,29 @@ The project demonstrates practical Business Analyst and Data Analyst skills incl
 
 ![Austin Housing Cover Page](images/00.cover-page.png)
 
-The report opens with a navigation page that introduces the analytical areas available within the dashboard:
+The cover page provides navigation to the main sections of the report:
 
 - Summary View
 - Location View
 - School View
 - Feature View
 
-This provides users with a guided entry point into the report.
+This gives users a simple starting point before moving into the detailed analysis.
 
 ---
 
-# 🎯 Business Problem
+# 🎯 Business Questions
 
-Residential property values across Austin vary substantially between locations, property types, housing characteristics, neighbourhoods, and available amenities.
+The project was built around a few practical housing-market questions:
 
-Headline property price alone does not explain these differences.
-
-The business therefore requires an analytical solution capable of answering:
-
-- Where are higher- and lower-priced properties concentrated?
-- Which housing types dominate the market?
-- Which property characteristics are associated with different price levels?
+- Where are higher- and lower-priced properties located?
+- Which property types are most common?
+- How different are median and average property prices?
+- Which property features are associated with higher prices?
 - How do school characteristics vary across neighbourhoods?
-- Which amenities are more common in higher-priced properties?
-- Which factors appear to influence listing price?
-- How can users dynamically investigate individual market segments?
-
----
-
-# 🎯 Project Objectives
-
-1. Provide an executive overview of the Austin housing market.
-2. Analyse housing availability across different property types.
-3. Compare median and average housing prices.
-4. Identify geographic concentrations of residential properties.
-5. Analyse school characteristics across Austin neighbourhoods.
-6. Compare property prices across different housing features.
-7. Identify characteristics associated with higher listing prices.
-8. Enable interactive filtering and market segmentation.
-9. Provide detailed property-level information.
-10. Translate housing data into business-oriented insights.
+- Are amenities such as garages, views and spas more common in higher-priced homes?
+- Which factors appear to be associated with listing price?
+- How can users compare specific property segments interactively?
 
 ---
 
@@ -95,7 +77,7 @@ The business therefore requires an analytical solution capable of answering:
 | Average Lot Size | **119K sq ft** |
 | Maximum Property Price | **$13.5M** |
 
-The dataset contains information covering:
+The dataset includes information on:
 
 - Property price
 - Home type
@@ -119,7 +101,7 @@ The dataset contains information covering:
 - Appliances
 - School ratings
 - School size
-- Student-to-teacher metrics
+- Student-to-teacher measures
 
 ---
 
@@ -135,10 +117,7 @@ The dataset contains information covering:
 - **Geographic Mapping**
 - **Key Influencers**
 - **Tooltips**
-- **Bookmarks / Navigation**
-- **Business Intelligence**
-- **Market Segmentation**
-- **Business Analysis**
+- **Bookmarks and Navigation**
 
 ---
 
@@ -146,7 +125,7 @@ The dataset contains information covering:
 
 ![Summary Dashboard](images/01.summary-dashboard.png)
 
-The Summary page provides an executive-level overview of the Austin housing market.
+The Summary page gives a quick view of the Austin housing dataset.
 
 ### Core KPIs
 
@@ -156,19 +135,19 @@ The Summary page provides an executive-level overview of the Austin housing mark
 - **1,975 sq ft median living area**
 - **8,276 sq ft median lot size**
 
-The page also analyses:
+The page also shows:
 
 - Properties by home type
 - Properties by ZIP code
 - Properties by construction year
 - Median vs average property price
-- Property feature availability
+- Availability of major property features
 
 ---
 
 ## 🏡 Housing Type Distribution
 
-Single-family properties dominate the dataset.
+Single-family homes make up most of the dataset.
 
 | Property Type | Property Count |
 |---|---:|
@@ -178,13 +157,13 @@ Single-family properties dominate the dataset.
 | Multiple Occupancy | **96** |
 | Vacant Land | **83** |
 
-Approximately **94% of analysed properties are Single Family homes**.
+Around **94% of the properties are Single Family homes**.
 
-### Business Insight
+### What This Means
 
-The dataset predominantly represents the Austin single-family housing market.
+Most of the analysis represents the single-family housing market.
 
-Analysis of smaller property categories should therefore be interpreted with greater caution because their sample sizes are considerably lower.
+The smaller property categories have much lower sample sizes, so comparisons involving those groups should be treated more carefully.
 
 ---
 
@@ -195,13 +174,11 @@ The dashboard shows:
 - **Median Property Price:** ~$405K
 - **Average Property Price:** ~$513K
 
-The average is substantially higher than the median.
+The average is noticeably higher than the median.
 
-### Business Insight
+This suggests that a smaller number of expensive properties are pulling the average upward.
 
-The housing-price distribution is positively skewed by higher-value properties.
-
-For describing a typical Austin property, the **median is therefore more representative than the average alone**.
+For that reason, the **median price is a better measure of a typical property in this dataset**.
 
 ---
 
@@ -209,33 +186,30 @@ For describing a typical Austin property, the **median is therefore more represe
 
 ![Location Analysis](images/02.location-analysis.png)
 
-The Location page provides an interactive geographic view of residential properties across the Austin area.
+The Location page maps properties across the Austin area.
 
-Users can select a price range and observe where matching properties are geographically concentrated.
+Users can select a price range and see where matching homes are concentrated.
 
 The analysis uses:
 
 - Latitude
 - Longitude
 - Property price
-- Geographic filtering
-- Dynamic price ranges
+- Price-range filters
 
-### Business Purpose
+This makes it easier to explore:
 
-This allows users to identify:
+- Higher-priced areas
+- Lower-priced areas
+- Property clusters
+- Homes within selected price ranges
+- Differences between parts of Austin
 
-- Premium residential areas
-- Lower-price housing areas
-- Geographic property clusters
-- Properties within selected price ranges
-- Spatial differences across the Austin housing market
+### Main Finding
 
-### Business Insight
+Austin should not be treated as one single housing market.
 
-Austin should not be treated as one homogeneous housing market.
-
-Property values vary materially by geography, making location one of the most important dimensions when comparing residential properties.
+Property prices vary substantially by location, so geographic context is important when comparing homes.
 
 ---
 
@@ -243,7 +217,7 @@ Property values vary materially by geography, making location one of the most im
 
 ![School Analysis](images/03.school-analysis.png)
 
-The School page evaluates education-related characteristics surrounding residential properties.
+The School page looks at education-related characteristics around the properties.
 
 ### School KPIs
 
@@ -257,26 +231,26 @@ The School page evaluates education-related characteristics surrounding resident
 | Average High Schools | **0.94** |
 | Average High School Size | **1.335K** |
 
-The page analyses:
+The page compares:
 
 - School rating
 - School size
 - Students per teacher
 - ZIP code
-- Geographic school distribution
+- Geographic distribution
 
-Properties can be grouped into categories such as:
+Schools can also be grouped into categories such as:
 
 - Poor
 - Average
 - Good
 - Exceptional
 
-### Business Insight
+### Main Finding
 
-School characteristics vary considerably across Austin neighbourhoods and provide an additional dimension for understanding residential-market segmentation.
+School characteristics vary across Austin neighbourhoods and provide useful extra context when comparing areas.
 
-Any relationship between school characteristics and housing price should be interpreted as **association rather than causation**.
+Any relationship between school characteristics and housing prices should be treated as an **association**, not proof that the school characteristic itself caused the price difference.
 
 ---
 
@@ -284,9 +258,9 @@ Any relationship between school characteristics and housing price should be inte
 
 ![Property Features Analysis](images/04.features-analysis.png)
 
-The Features page investigates how median home price changes across different property characteristics.
+This page compares median property prices across different housing characteristics.
 
-A dynamic parameter allows users to switch between variables such as:
+A field parameter allows users to switch between:
 
 - Garage spaces
 - Bedrooms
@@ -297,19 +271,15 @@ A dynamic parameter allows users to switch between variables such as:
 - Appliances
 - Home type
 
-### Business Purpose
-
-Instead of creating a separate chart for every property characteristic, the field parameter allows several business questions to be answered through a single dynamic visual.
+Instead of building a separate chart for every field, one visual can answer several different questions.
 
 ---
 
-# 🧠 Key Influencers Analysis
+# 🧠 Key Influencers
 
-The report also includes Power BI's **Key Influencers** visual.
+The report also uses Power BI's **Key Influencers** visual to explore which variables are associated with higher listing prices.
 
-This investigates factors associated with increases in listing price.
-
-Variables considered include:
+Variables include:
 
 - Living area
 - Lot size
@@ -322,23 +292,21 @@ Variables considered include:
 - Year built
 - Other property features
 
-### Business Insight
+### Main Finding
 
-Residential property value is multi-dimensional.
+Property price is influenced by several characteristics at the same time.
 
-No single feature fully explains property price.
+A useful comparison should therefore consider:
 
-A meaningful property assessment should consider:
+**Location + Property Size + Property Configuration + Amenities + Neighbourhood**
 
-**Location + Property Size + Property Configuration + Amenities + Neighbourhood Characteristics**
+rather than relying on one feature alone.
 
 ---
 
 # 🏊 Property Amenities and Price
 
-Selected features show different median price levels.
-
-Examples include:
+Some property features are associated with noticeably different median prices.
 
 | Property Feature | Without | With |
 |---|---:|---:|
@@ -346,13 +314,18 @@ Examples include:
 | View | ~$395K | **~$475K** |
 | Spa | ~$399K | **~$575K** |
 
-### Business Interpretation
+Properties with garages, views and spas tend to appear in higher-priced parts of the market.
 
-Properties with garages, views, and spas tend to occupy higher-price market segments.
+However, these numbers should **not** be interpreted as the direct dollar value added by each feature.
 
-However, these differences should not be interpreted as the direct monetary value created by the feature itself.
+For example, homes with spas may also be:
 
-Other characteristics such as property size, location, construction quality, and land value may contribute simultaneously.
+- larger
+- newer
+- in more expensive locations
+- built on larger lots
+
+The feature and the higher price may therefore be related to several other factors.
 
 ---
 
@@ -360,9 +333,7 @@ Other characteristics such as property size, location, construction quality, and
 
 ![Interactive Filter Panel](images/05.filter-panel.png)
 
-The report contains a detailed filter panel allowing users to conduct self-service analysis.
-
-Users can filter by:
+The report includes a detailed filter panel for users who want to examine specific housing segments.
 
 ### Property Configuration
 
@@ -402,13 +373,11 @@ Users can filter by:
 - Year built
 - Lot size
 
-### Business Value
-
-This allows stakeholders to investigate highly specific property segments without requiring a separate report for every question.
+This makes it possible to answer very specific questions without building a new report page each time.
 
 For example:
 
-> 3-bedroom single-family properties with garages, selected school ratings, a specific ZIP code, recent construction years, and a defined listing-price range.
+> Show me 3-bedroom single-family homes with garages in a selected ZIP code, within a particular price range and school-rating range.
 
 ---
 
@@ -416,9 +385,9 @@ For example:
 
 ![Property Tooltip](images/09.Property%20Tooltip.png)
 
-The report includes a dedicated property tooltip page designed to provide more detailed information about individual properties.
+The report includes a tooltip page for inspecting individual properties.
 
-The tooltip contains:
+It contains:
 
 - Address
 - City
@@ -439,16 +408,7 @@ The tooltip contains:
 - Window features
 - Waterfront features
 
-### Business Value
-
-The tooltip allows the user to move from market-level analysis to **individual property inspection** without leaving the report.
-
-This improves the report's usefulness for:
-
-- Property comparison
-- Buyer research
-- Real-estate screening
-- Detailed listing investigation
+This allows users to move from the overall market view into an individual property without leaving the report.
 
 ---
 
@@ -456,7 +416,7 @@ This improves the report's usefulness for:
 
 ![Power BI Data Model](images/06.data-model-main.png)
 
-The solution uses a structured analytical model instead of relying on one flat table.
+The report uses several related tables rather than keeping everything in one large flat table.
 
 The main model contains:
 
@@ -470,17 +430,15 @@ The main model contains:
 - `word_summary_pqe`
 - `_measures`
 
-### Model Design
+The central `housing_fact` table connects to supporting tables containing information about:
 
-The central `housing_fact` table connects to supporting analytical tables containing:
+- Houses
+- Locations
+- Schools
+- Property features
+- Descriptions
 
-- House characteristics
-- Location information
-- School information
-- Feature information
-- Property descriptions
-
-This structure supports filtering and interaction across multiple report pages.
+This keeps different parts of the dataset organised and allows filters to work across the report.
 
 ---
 
@@ -488,102 +446,94 @@ This structure supports filtering and interaction across multiple report pages.
 
 ![Power BI Parameter Tables](images/07.data%20model%202.png)
 
-The model also includes disconnected parameter and helper tables used for interactive report behaviour.
+The model also contains parameter and helper tables.
 
-Examples include:
+These are used for:
 
-- Parameter range tables
 - Field parameters
-- School-group parameters
-- Ranking tables
-- Measure support tables
-
-These support:
-
+- Range selection
+- School grouping
+- Ranking
 - Dynamic metric selection
 - Dynamic visual axes
-- School segmentation
-- Range filtering
-- Ranking
-- Interactive report behaviour
 
-### Business Intelligence Value
-
-The use of disconnected parameter tables reduces the need for duplicated visuals and allows the same dashboard components to answer multiple analytical questions.
+The main advantage is that the same visual can be reused for several different questions instead of creating many almost identical charts.
 
 ---
 
-# 💡 Key Business Findings
+# 💡 Key Findings
 
-## 1. Austin Housing Prices Are Highly Segmented
+## 1. The Median and Average Tell Different Stories
 
-The substantial difference between median and average housing prices indicates the presence of a premium housing segment.
+The median property price is around **$405K**, while the average is around **$513K**.
 
----
-
-## 2. Single-Family Housing Dominates the Dataset
-
-Approximately **94%** of analysed properties are Single Family homes.
+The difference shows that expensive properties pull the average upward.
 
 ---
 
-## 3. Geographic Location Is Critical
+## 2. Single-Family Homes Dominate the Dataset
 
-Property prices vary significantly across Austin.
+Approximately **94%** of the analysed properties are Single Family homes.
 
-Comparing properties at city-wide level alone can therefore hide important geographic differences.
+This is therefore mainly a single-family housing dataset.
+
+---
+
+## 3. Location Matters
+
+Property prices vary considerably across the Austin area.
+
+City-wide averages can hide large differences between ZIP codes and neighbourhoods.
 
 ---
 
 ## 4. Property Size and Configuration Matter
 
-Living area, lot size, bedrooms, bathrooms, garages, and other structural characteristics are associated with different housing-price segments.
+Living area, lot size, bedrooms, bathrooms, garages and other structural characteristics are associated with different price levels.
 
 ---
 
-## 5. School Characteristics Add Neighbourhood Context
+## 5. School Data Adds Neighbourhood Context
 
-School ratings, school size, and student-to-teacher measures provide an additional dimension for evaluating neighbourhoods.
+School ratings, size and student-to-teacher measures provide another way to compare areas.
 
----
-
-## 6. Premium Amenities Are Associated With Higher Prices
-
-Properties containing garages, spas, and views generally show higher median prices than properties without these features.
+They should be considered alongside location and property characteristics rather than used alone.
 
 ---
 
-## 7. Property Value Is Multi-Dimensional
+## 6. Some Amenities Are Associated With Higher Prices
 
-No single variable fully explains residential property price.
+Homes with garages, spas and views generally have higher median prices in this dataset.
 
-Housing value should therefore be analysed using multiple dimensions simultaneously.
-
----
-
-# 💼 Business Recommendations
-
-## 1. Prioritise Median Price for Benchmarking
-
-Because premium properties increase the average significantly, median property price provides a more representative measure of typical market value.
+That does not mean those features independently caused the entire price difference.
 
 ---
 
-## 2. Compare Properties Within Similar Locations
+## 7. Housing Price Is Multi-Dimensional
 
-Properties should be compared within relevant geographic areas or ZIP codes rather than across Austin as a whole.
+There is no single field that explains the housing market by itself.
 
----
-
-## 3. Compare Similar Property Types
-
-Single-family properties, condominiums, townhouses, and other housing types should be analysed within their respective market segments.
+Useful comparisons need several dimensions at the same time.
 
 ---
 
-## 4. Evaluate Multiple Property Characteristics
+# 💼 Practical Takeaways
 
-Property assessment should incorporate:
+### Use Median Price for Typical-Market Comparisons
+
+Because expensive properties pull the average upward, median price gives a better picture of the typical property.
+
+### Compare Homes Within Similar Locations
+
+A $500K property in one ZIP code may represent a very different market position from a $500K property somewhere else.
+
+### Compare Similar Home Types
+
+Single-family homes, condos and townhouses should generally be compared within their own groups.
+
+### Look at More Than Price
+
+Useful property comparisons should include:
 
 - Location
 - Living area
@@ -591,29 +541,12 @@ Property assessment should incorporate:
 - Bedrooms
 - Bathrooms
 - Home type
-- Property features
-- School characteristics
+- Amenities
+- School context
 
----
+### Treat Feature Premiums Carefully
 
-## 5. Treat Amenity Premiums Carefully
-
-Higher median prices among homes with garages, spas, or views indicate association rather than direct causal value.
-
----
-
-## 6. Use Interactive Segmentation for Stakeholder Analysis
-
-The report's dynamic filters and field parameters enable users to investigate very specific housing-market segments.
-
-This supports:
-
-- Buyer property searches
-- Investor screening
-- Market comparisons
-- Neighbourhood analysis
-- Property positioning
-- Real-estate research
+A higher median price for homes with a spa or view does not mean the feature itself created the whole price difference.
 
 ---
 
@@ -621,59 +554,67 @@ This supports:
 
 ## Property-Type Imbalance
 
-Approximately 94% of observations are Single Family homes.
+Around **94%** of the observations are Single Family homes.
 
-Other property types have much smaller sample sizes.
+Other home types have much smaller samples.
 
 ---
 
-## Association Does Not Equal Causation
+## Association Does Not Mean Causation
 
-Relationships between listing price and characteristics such as:
+Relationships between listing price and variables such as:
 
 - School rating
-- Garage availability
+- Garage
 - Spa
 - View
 - Living area
 
-represent observed associations.
+show patterns in the dataset.
 
-They do not prove independent causal effects.
+They do not prove that one variable independently caused the price difference.
 
 ---
 
 ## Confounding Variables
 
-Location, property size, land value, property quality, amenities, and neighbourhood characteristics may influence housing prices simultaneously.
+Property price may be affected by several factors at once, including:
+
+- Location
+- Property size
+- Land value
+- Age
+- Amenities
+- Property quality
+- Neighbourhood characteristics
 
 ---
 
 ## Outliers
 
-The dataset contains unusually high-priced and unusually large properties.
+The dataset contains unusually expensive and unusually large properties.
 
-These observations may materially influence averages.
+These values can strongly affect averages.
 
-Median measures are therefore used extensively throughout the analysis.
+For this reason, median measures are used throughout the report.
 
 ---
 
-# 📌 Executive Conclusion
+# 📌 Final Takeaway
 
-The Austin residential property market demonstrates substantial variation across geography, property structure, school characteristics, and housing amenities.
+The Austin housing market in this dataset varies substantially by location, property size, home type and available features.
 
-The typical property in the dataset has a median price of approximately **$405K**, while the higher average price of approximately **$513K** reflects the influence of premium properties.
+The typical property has a median listing price of approximately **$405K**, while the average of approximately **$513K** is pushed upward by higher-priced properties.
 
-Single-family housing represents approximately **94% of analysed properties**, making it the dominant residential segment.
+Single-family homes make up around **94%** of the dataset.
 
-The analysis demonstrates that housing valuation should be approached as a **multi-dimensional business problem** rather than relying on listing price alone.
+The main lesson from the analysis is that property value should not be judged from price alone.
 
-The final Power BI solution allows stakeholders to move from:
+A more useful comparison considers:
 
-**Executive Overview → Geographic Analysis → School Analysis → Property Features → Detailed Property Inspection**
+**Location → Property Type → Property Size → Features → Neighbourhood Context**
 
-within a single interactive analytical environment.
+The Power BI report was built so users can move from the overall market into increasingly detailed property segments and individual listings.
 
 ---
 
@@ -696,3 +637,13 @@ Austin-Housing-Data-Insights/
     ├── 06.data-model-main.png
     ├── 07.data model 2.png
     └── 09.Property Tooltip.png
+```
+
+---
+
+## Author
+
+**Shah Tahsin**  
+Business Data Analyst | Power BI · SQL · Python
+
+[GitHub](https://github.com/shababtahsin)
